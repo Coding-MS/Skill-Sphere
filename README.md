@@ -1,8 +1,29 @@
 # Skill-Sphere
 This is my final capstone project for Code Institute. Skill Sphere is a full stack project that aims to create a website so that a user can post a request for a task/ project and be connected with an experienced freelancer.  The purpose of Skill Sphere is to allow users to post their requests for a project so that they can get in contact with an expert freelancer and complete the designated task/project. Skill Sphere will also highlight freelancer giving them exposure for their varied talents and skills as their portfolio and profile will display their previous projects and its associated customer feedback with an image of the final project this will highlight the freelancers and give them a platform for their business.
 
+## Target Audience 
+The target audience for Skill Sphere is any user who wants help with a project or task. The audience of the website is varied as each user would want something different from the website. Skil Sphere is a more of a community board that signposts and connects our users to their desired freelancer so that they can complete their project or task. It also has a second target audience being the freelancers themselves as Skill Sphere provides freelances with a platform to display their talent and skills to a potiential customer through their profile which acts as portfillo to advertise their services.  
+
 ## User stories 
-Skill Sphere aims to address the following user stories. 
+Skill Sphere aims to address the following user stories: 
+
+User Story 1: As a user I want to find a trustworthy freelancer to walk my dog. 
+Acceptance Citeria: Create a post that allows the user to find a reliable freelance who walks dogs. 
+
+User Story 2: As a user I want to hire a freelance experienced painter to paint my door red. 
+Acceptance Criteria: Create a post that allows users to connect with a freelance painter. 
+
+User Story 3: As a user I want to hire a freelance that is available to work certain hours and days as I have a busy schedule. 
+Acceptance Criteria: Show the available times of the freelancer so that the user can talk to the freelancer to arrange a suitable time to complete the project. 
+
+User Story 4: As a user I want to hire an experience freelance hair dresser to cut my hair at home. 
+Acceptance Criteria: Create a post that enables the user to connect with an experienced hairdresser. (Add a section to the freelancer page so that they can contact them). 
+
+User Story 5: As a user I want to create a job request so that I can get in contact with freelancers. 
+Acceptance Criteria: Functionality in the Workboard page which allows the user to create a job request and be redirected to a suitable freelancer. 
+
+User Story 6: As a user I want the option to meet with the freelancer virtually to talk to him about the project. 
+Acceptance Criteria: Add their contact information to their profile and include any virtual platforms they use. 
 
 ## Wire Frame and design 
 I have created a wireframe for Skill Sphere this application focusses on connection users to experienced and qualified freelancers to complete their designated task or project. So I have started the design process with visualising the Home Page which is the initial page that the user will visit. The wire frame design can be seen below. 
@@ -45,7 +66,7 @@ The User would first be at the Home page of Skill Sphere. They would then have t
 
 
 ## Core functionality 
-The Core functionality of my project will be focussed on the WorkBoard page to ensure that I have CRUD functionality so the user one authenticated can create a post requesting help from a freelancer to complete a certain task or odd job. Once the user has submitted this post they will be able to see it on the Workboard below and on their own separate section this will be implemented to avoid confusion. It is also essential that authentication is implemented on this page to ensure that only logged in users can create posts and that only the user who created the post itself can edit or delete their own post from the workboard. So my inital design approach is to have build the Minium Requirement Project first to ensure the core functionality of Skill Sphere then depending on the time I will focus on implementing as much as possible in the other sections.
+The Core functionality of my project will be focussed on the WorkBoard page to ensure that I have CRUD functionality so the user one authenticated can create a post requesting help from a freelancer to complete a certain task or odd job. Once the user has submitted this post they will be able to see it on the Workboard below and on their own separate section this will be implemented to avoid confusion. It is also essential that authentication is implemented on this page to ensure that only logged in users can create posts and that only the user who created the post itself can edit or delete their own post from the workboard. So my inital design approach is to have build the Minium Viable Project first to ensure the core functionality of Skill Sphere then depending on the time I will focus on implementing as much as possible in the other sections.
 
 ## Possible features 
 During my design phase and ideation of the project I came up with many good ideas for functionality and possible design choices. However due to the time constraints of the project I didn`t have enough time to fully realize the inherent potiential of these features. The list below outlines the ideas for additional functionality which could be added in the future: 
