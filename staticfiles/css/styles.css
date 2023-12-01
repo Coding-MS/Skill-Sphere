@@ -1,0 +1,38 @@
+/* Styling the home page */ 
+
+.home_page{
+    body, html {
+        height: 100%;
+    }
+    
+    /* The hero image */
+    .container {
+      display: flex;
+    }
+
+    .border {
+      background: color #e98a15;;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 800px;
+    }
+
+   
+}
+
+/* navigation bar */ 
+
+#Navigation-bar {
+  background-color: #003b36;
+}
+
+/* footer */ 
+
+. col background-footer {
+  color:white; 
+  background-color: #59114d;
+}

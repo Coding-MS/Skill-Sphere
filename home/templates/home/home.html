@@ -1,4 +1,93 @@
-{% block content %}
-<p> This is the home page!</p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <title>Testimonial Carousel</title>
+    <script src="https://kit.fontawesome.com/6b2825af5a.js" crossorigin="anonymous"></script>
+
+    <title>Skill Sphere </title>
+
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <main>
+        {% block content %}
+        {% endblock%}
+        <div class="container">
+            <div class="border">
+                <h1 class="text-center">Welcome to Skill Sphere</h1>
+                <p class="text-center ">Skill Sphere is a revolutionary platform connecting users with certified
+                    freelancers, ensuring top-notch quality through rigorous vetting of work history, certifications,
+                    and skills. This commitment guarantees collaboration with certified professionals, streamlining
+                    project management with user-friendly tools. Elevate your projects with Skill Sphere's diverse
+                    talent network for unparalleled quality and efficiency in every collaboration.</p>
+            </div>
+
+            <div class="hero">
+                <img src="{% static 'images/Hero image.jpg' %}" alt="Conference room with freelancers planning a project">
+            </div>
+        </div>
+
+        <section class="mt-5">
+            <div class="row">
+                <div class="col">
+                    <img src="{% static 'images/Freelancer-home.jpg' %}" class="profile" alt="Image of freelancer">
+                    <div class="border-freelancer">
+                        <h2>Vetted and Certified Freelancers</h2>
+                        <p>At Skill Sphere, quality is non-negotiable. We understand the importance of reliable and
+                            skilled freelancers in ensuring the success of your project. To guarantee excellence, all
+                            freelancers undergo a rigorous vetting process. This includes thorough examination of their
+                            work history, verification of certifications, and assessment of their skills. Only those who
+                            meet our stringent standards make it into the Skill Sphere community, ensuring that you are
+                            paired with a freelancer who not only meets but exceeds your expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+
+        <h3 class="our-projects"> Our Projects </h3>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <img class="testimonial-img" src="{% static 'images/Tree-house-project.jpg' %}" alt="Treehouse">
+                <p class="comment">"Working with the freelancer felt like a true collaboration. They were open to
+                    feedback and actively sought to understand my vision for the project."</p>
+                <p class="user"> John Clark</p>
+            </div>
+            <div class="testimonial">
+                <img class="testimonial-img" src="{% static 'images/painter-project.jpg'}" alt="Painter">
+                <p class="comment">"The quality of work delivered by the freelancer is outstanding. Attention to detail
+                    and precision were clearly prioritized."</p>
+                <p class="user">Emily Smith</p>
+            </div>
+            <div class="testimonial">
+                <img class="testimonial-img" src="{% static 'images/Hairdresser.jpg'}" alt="Hair-cut">
+                <p class="comment">"I could tell that the hairdresser is highly skilled and experienced. The precision
+                    in their work reflects a true mastery of the craft."</p>
+                <p class="user">Rhys Davies</p>
+            </div>
+            </div>
+    </main>
+
+
+    {% include 'footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
