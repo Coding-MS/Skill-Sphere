@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from djrichtextfield.models import RichTextField
 
-class Note(models.Model):
+class workboard (models.Model):
     user = models.ForeignKey(User, related_name="task_owner", on_delete=models.CASCADE, default=None)
     title = models.CharField(max_length=75, null=False, blank=False)
     note = RichTextField(max_length=500, null=False, blank=False)

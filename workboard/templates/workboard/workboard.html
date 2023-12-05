@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-center"> Workboard</h2>
+
+<div class="col">
+{% for note in notes %}
+<div class="col-4">
+    <div class="card">
+        <div class="card-content">
+            <div class="media">
+                <div class="media-content">
+                    <p class="title is-4"> {{workboard.title}}</p>
+                    <p class="user is-4"> {{workboard.user}}</p>
+                    <p class="substitle is-6">{{workboard.created_at}}</p>
+                    <p class="substitle is-6"> {{workboard.due_date}}</p>
+                </div>
+            </div>
+            <div class="content">
+                {{workboard.note}}
+            </div>
+        </div>
+    </div>
+</div>
+</div>

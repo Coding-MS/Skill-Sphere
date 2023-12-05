@@ -18,9 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views
 from home.views import home
+from workboard.views import workboard
+from django.urls import path, include
 
 urlpatterns = [
     path('', home, name='home'),
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')), 
+    path('templates/workboard', workboard, name='workboard'),
 
 ]
+
