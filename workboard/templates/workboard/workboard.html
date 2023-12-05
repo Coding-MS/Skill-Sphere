@@ -1,25 +1,41 @@
-{% extends 'base.html' %}
-
+{% load static %}
+{% extends 'includes/base.html'%}
+{% include 'includes/header.html' %}
 {% block content %}
-<h2 class="text-center"> Workboard</h2>
-
-<div class="col">
-{% for workboard in workboard %}
-<div class="col-4">
-    <div class="card">
-        <div class="card-content">
-            <div class="media">
-                <div class="media-content">
-                    <p class="title is-4"> {{workboard.title}}</p>
-                    <p class="user is-4"> {{workboard.user}}</p>
-                    <p class="substitle is-6">{{workboard.created_at}}</p>
-                    <p class="substitle is-6"> {{workboard.due_date}}</p>
+<div class="container">
+    <h2 class="text-center mb-4">Workboard</h2>
+    <div class="row">
+        {% for workboard_item in workboard %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ workboard_item.title }}</h5>
+                    <p class="card-text">{{ workboard_item.note }}</p>
+                    <p class="card-text"><small class="text-muted">{{ workboard_item.created_at }}</small></p>
+                    <p class="card-text"><small class="text-muted">{{ workboard_item.due_date }}</small></p>
                 </div>
-            </div>
-            <div class="content">
-                {{workboard.note}}
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" action="{% url 'workboard' %}" class="form-container card p-4">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-end mt-3">
+                    <button type="submit" class="btn btn-primary">Publish Post</button>
+                    <a href="{% url 'workboard' %}" class="btn btn-secondary">Discard Post</a>
+
+                    <a href="{% url 'delete_post' workboard_item.id %}" class="btn btn-danger"
+                        onclick="return confirm('Are you sure you want to delete this post?')">Delete Post</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
+{% endfor %}
 </div>
+
+{% endblock %}
+
+{% include 'footer.html' %}
