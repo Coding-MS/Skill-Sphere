@@ -42,16 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudinary_storage', 
+    'djrichtextfield', 
     'crispy_forms', 
     'crispy_bootstrap5', 
     'cloudinary',
     'django.contrib.sites', 
     'allauth', 
     'allauth.account',
-    'allauth.socialaccount', 
-
-
-
     'home', 
     'workboard', 
 
@@ -97,15 +94,11 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_CLASSES = [
-    'django.contrib.auth.backends.ModelBackend',
-] 
-
-AUTHENTICATION_BACKENDS = [
+AUTHENTICATION_BACKEND = [
     #Needed to login by username in Django admin, regardless of 'allauth'
-    'django.contrib.auth.backends.ModelBackends', 
+    'django.contrib.auth.backends.ModelBackend', 
 
-    'allauth.account.auth_backends.AuthenticationBackend', 
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 
