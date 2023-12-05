@@ -7,20 +7,32 @@
     
     /* The hero image */
     .container {
-      display: flex;
-    }
-
-    .border {
-      background-color:  #e98a15;
+      position: relative;
+  }
+  
+  .hero {
+      position: relative;
+      background-color: rgba(255, 165, 0, 0.5);
+      overflow: hidden;
+  }
+  
+  .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
+  
+  .border {
+      background-color: rgba(255, 165, 0, 0.5);
       color: white;
-      position:bottom;
-    }
-
-     .hero img {
-      width: 30%;
-      max-width: 200px;
-    }
-
+      padding: 20px;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 0; 
+      width: 98.2%; 
+      box-sizing: border-box; 
+      z-index: 1;
+  }
 
     .border-freelancer {
       background-color: #003b36;
@@ -30,13 +42,15 @@
 
     }
 
-    .profile {
-      width: 25%;
-      max-width: 400px;
-      border-radius: 10%;
-      position:left; 
-      margin-left:10px; 
-
+      .profile {
+        width: 110%;
+        max-width: 650px;
+        border-radius: 10%;
+        float: left;
+        margin-right: 10px;
+        height: 35vh;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .our-projects {
@@ -53,18 +67,21 @@
     .testimonial-carousel {
       width: 80%;
       margin: 50px auto;
-    }
+  }
     
-    .testimonial {
-      text-align: center;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
+  .testimonial {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid  #59114d; 
+    border-radius: 15px;
+    box-shadow: 0 0 10px #59114d; 
+    background-color: #fff; 
+}
     
-    .comment {
-      font-style: italic;
-    }
+.comment {
+  font-style: italic;
+  color: #555;
+}
     
     .user {
       font-weight: bold;
@@ -86,7 +103,6 @@
 footer {
   color:white; 
   background-color: #59114d;
-  position: fixed;
   width:100%; 
 }
 
@@ -96,6 +112,7 @@ footer {
   padding:5px; 
 }
 
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .container {
@@ -103,11 +120,20 @@ footer {
       align-items: center;
   }
 
-  .hero,
-  .profile {
-      width: 100%;
+  .hero {
+    width: 100%;
       max-width: none;
       margin-left: 0;
+  }
+  .profile {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10%;
+    float: left;
+    margin-right: 10px;
+    height: 70vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .testimonial-carousel {

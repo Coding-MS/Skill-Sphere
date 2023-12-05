@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from workboard.views import workboard_list,WorkboardDetailView, WorkboardDeleteView
 from django.contrib.auth import views
 from home.views import home
 from workboard.views import workboard
@@ -26,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('djrichtextfield/', include('djrichtextfield.urls')), 
-    path('templates/workboard', workboard, name='workboard'),
+    path('workboard/', workboard_list, name='workboard_list'),
+    path('workboard/<slug:slug>/', WorkboardDetailView.as_view(), name='workboard_detail'),
+    path('workboard/<slug:slug>/delete/', WorkboardDeleteView.as_view(), name='workboard_delete'),
 ]
-

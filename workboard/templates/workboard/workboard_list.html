@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workboard - Task List</title>
+</head>
+<body>
+    <h1>Workboard - Task List</h1>
+    <ul>
+        {% for task in tasks %}
+            <li><a href="{% url 'workboard_detail' slug=task.slug %}">{{ task.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
