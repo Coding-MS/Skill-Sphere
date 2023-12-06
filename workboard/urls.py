@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from workboard.views import workboard_list,workboardDetailView, workboardDeleteView
+from workboard.views import Workboard_list,WorkboardDetailView, WorkboardDeleteView
 from home.views import home
 from .views import WorkboardView
 from django.urls import path, include
@@ -25,8 +25,8 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('djrichtextfield/', include('djrichtextfield.urls')), 
     path('workboard/workboard/', WorkboardView.as_view(), name='workboard'),
-    path('workboard/workboard_list', workboard_list.as_view(), name='workboard_list'),
-    path('workboard/<slug:slug>/', workboardDetailView.as_view(), name='workboard_detail'),
-    path('workboard/<slug:slug>/delete/', workboardDeleteView.as_view(), name='workboard_delete'),
+    path('workboard/workboard_list', Workboard_list.as_view(), name='workboard_list'),
+    path('workboard/<int:pk>/', WorkboardDetailView.as_view(), name='workboard_detail'),
+    path('workboard/<int:pk>/delete/', WorkboardDeleteView.as_view(), name='workboard_delete'),
 ]
 

@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Workboard - Task Detail</title>
-</head>
-<body>
-    <h1>{{ workboard.title }}</h1>
-    <p>{{ workboard.note }}</p>
-    <p>Due Date: {{ workboard.due_date }}</p>
+{% extends 'includes/base.html'%}
+{% load static %}
+{% include 'includes/header.html' %}
+{% block content %}
+    <h1 class="text-center">{{ workboard.title }}</h1>
+    <p class="text-center">{{ workboard.note }}</p>
+    <p class="text-center">Due Date: {{ workboard.due_date }}</p>
    
-</body>
-</html>
+{% endblock %}
 

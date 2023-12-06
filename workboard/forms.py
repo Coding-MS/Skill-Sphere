@@ -23,3 +23,4 @@ class WorkboardForm(forms.ModelForm):
     class Meta:
         model = Workboard
         fields = ['title', 'speciality', 'start_date', 'end_date', 'description', 'special_requests']
+

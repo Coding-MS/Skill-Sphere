@@ -15,18 +15,18 @@ class WorkboardView(View):
         return render(request, self.template_name, context)
 
 
-class workboard_list(ListView):
+class Workboard_list(ListView):
     template_name = "workboard/workboard_list"
     model = workboard
-    context_object_name = 'jobs'
+    context_object_name = 'workboard'
 
-class workboardDetailView(DetailView):
+class WorkboardDetailView(DetailView):
     model = workboard
-    template_name = 'workboard_detail.html'
-    context_object_name = 'task'
+    template_name = 'workboard/workboard_detail.html'
+    context_object_name = 'workboard'
 
-class workboardDeleteView(DeleteView):
+class WorkboardDeleteView(DeleteView):
     model = workboard
-    template_name = 'workboard_detail.html' 
+    template_name = 'workboard/workboard.html' 
     context_object_name = 'task'
-    success_url = 'workboard_list.html'
+    success_url = 'workboard/workboard_list.html'
