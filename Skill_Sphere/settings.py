@@ -24,7 +24,7 @@ if os.path.exists('env.py'):
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get('SECRET_KEY', '@(cb3cs9mho$wx$f$t0*)&x0x_cg@sx#78xqaz$@9a=i4kc=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,12 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'cloudinary_storage', 
     'djrichtextfield', 
     'crispy_forms', 
     'crispy_bootstrap5', 
     'cloudinary',
-    'django.contrib.sites', 
     'allauth', 
     'allauth.account',
     'home', 
@@ -94,12 +94,12 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_BACKEND = [
+AUTHENTICATION_BACKEND = (
     #Needed to login by username in Django admin, regardless of 'allauth'
     'django.contrib.auth.backends.ModelBackend', 
 
     'allauth.account.auth_backends.AuthenticationBackend',
-]
+)
 
 
 

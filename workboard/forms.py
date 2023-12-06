@@ -3,14 +3,14 @@ from .models import workboard
 
 class WorkboardForm(forms.ModelForm):
     SPECIALITIES = [
-        ('Plumber', 'Plumber'),
-        ('Caterers', 'Caterers'),
-        ('Seamstress', 'Seamstress'),
-        ('Hairdresser', 'Hairdresser'),
-        ('Technical Repairs', 'Technical Repairs'),
-        ('Legal', 'Legal'),
-        ('Painter', 'Painter'),
-        ('Other', 'Other'),
+        ('Plumber':'Plumber'),
+        ('Caterers': 'Caterers'),
+        ('Seamstress': 'Seamstress'),
+        ('Hairdresser': 'Hairdresser'),
+        ('Technical Repairs':'Technical Repairs'),
+        ('Legal': 'Legal'),
+        ('Painter':'Painter'),
+        ('Other': 'Other'),
     ]
 
     title = forms.CharField(max_length=255, label='Title of the Post')

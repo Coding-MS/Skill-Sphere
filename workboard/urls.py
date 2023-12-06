@@ -17,14 +17,14 @@ Including another URLconf
 from django.urls import path
 from workboard.views import workboard_list,workboardDetailView, workboardDeleteView
 from home.views import home
-from workboard.views import workboard
+from .views import WorkboardView
 from django.urls import path, include
 
 urlpatterns = [
     path('', home, name='home'),
     path('accounts/', include('allauth.urls')),
     path('djrichtextfield/', include('djrichtextfield.urls')), 
-    path('workboard/workboard',workboard, name='workboard' ),
+    path('workboard/workboard/', WorkboardView.as_view(), name='workboard'),
     path('workboard/workboard_list', workboard_list.as_view(), name='workboard_list'),
     path('workboard/<slug:slug>/', workboardDetailView.as_view(), name='workboard_detail'),
     path('workboard/<slug:slug>/delete/', workboardDeleteView.as_view(), name='workboard_delete'),
