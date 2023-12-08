@@ -2,10 +2,11 @@
 {% load static %}
 {% include 'includes/header.html' %}
 {% block content %}
-    <div class="hero">
+<div class="row justify-content-center align-items-center">
+    <div class="hero col-10">
         <img src="{% static 'images/Hero-image.jpg' %}" alt="Conference room with freelancers planning a project">
     </div>
-    <div class="border">
+    <div class="border col-10">
         <h1 class="text-center">Welcome to Skill Sphere</h1>
         <p class="text-center">Skill Sphere is a revolutionary platform connecting users with certified
             freelancers, ensuring top-notch quality through rigorous vetting of work history, certifications,
@@ -13,46 +14,52 @@
             project management with user-friendly tools. Elevate your projects with Skill Sphere's diverse
             talent network for unparalleled quality and efficiency in every collaboration.</p>
     </div>
+</div>
 <br>
 <br>
 <section>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="{% static 'images/Freelancer-home.jpg' %}" class="profile" alt="Image of freelancer">
-            </div>
-            <div class="col-md-6">
-                <div class="border-freelancer">
-                    <h2>Vetted and Certified Freelancers</h2>
-                    <p>At Skill Sphere, quality is non-negotiable. We understand the importance of reliable and
-                        skilled freelancers in ensuring the success of your project. To guarantee excellence, all
-                        freelancers undergo a rigorous vetting process. This includes thorough examination of their
-                        work history, verification of certifications, and assessment of their skills. Only those who
-                        meet our stringent standards make it into the Skill Sphere community, ensuring that you are
-                        paired with a freelancer who not only meets but exceeds your expectations.</p>
-                </div>
+    <div class="row">
+        <div class="col-10 col-md-5">
+            <img src="{% static 'images/Freelancer-home.jpg' %}" class="profile img-fluid" alt="Image of freelancer">
+        </div>
+        <div class="col-10 col-md-5 d-flex flex-column justify-content-around align-items-center">
+            <div class="border-freelancer ">
+                <h2>Vetted and Certified Freelancers</h2>
+                <p>At Skill Sphere, quality is non-negotiable. We understand the importance of reliable and
+                    skilled freelancers in ensuring the success of your project. To guarantee excellence, all
+                    freelancers undergo a rigorous vetting process. This includes thorough examination of their
+                    work history, verification of certifications, and assessment of their skills. Only those who
+                    meet our stringent standards make it into the Skill Sphere community, ensuring that you are
+                    paired with a freelancer who not only meets but exceeds your expectations.</p>
             </div>
         </div>
+    </div>
 </section>
 <br>
-<h3 class="our-projects"> Our Projects </h3>
-<div class="testimonial-carousel">
-    <div class="testimonial my-2">
-        <img class="testimonial-img" src="{% static 'images/Tree-house-project.jpg' %}" alt="Treehouse">
-        <p class="comment">"Working with the freelancer felt like a true collaboration. They were open to
-            feedback and actively sought to understand my vision for the project."</p>
-        <p class="user"> John Clark</p>
-    </div>
-    <div class="testimonial my-2">
-        <img class="testimonial-img" src="{% static 'images/painter-project.jpg'%}" alt="Painter">
-        <p class="comment">"The quality of work delivered by the freelancer is outstanding. Attention to detail
-            and precision were clearly prioritized."</p>
-        <p class="user">Emily Smith</p>
-    </div>
-    <div class="testimonial my-2">
-        <img class="testimonial-img" src="{% static 'images/Hairdresser.jpg' %}" alt="Hair-cut">
-        <p class="comment">"I could tell that the hairdresser is highly skilled and experienced. The precision
-            in their work reflects a true mastery of the craft."</p>
-        <p class="user">Rhys Davies</p>
+<div class="row justify-content-around align-items-center">
+    <div class="col-10">
+        <h3 class="our-projects"> Our Projects </h3>
+        <div class="testimonial-carousel">
+            <div class="testimonial my-2">
+                <img class="testimonial-img" src="{% static 'images/Tree-house-project.jpg' %}" alt="Treehouse">
+                <p class="comment">"Working with the freelancer felt like a true collaboration. They were open to
+                    feedback and actively sought to understand my vision for the project."</p>
+                <p class="user"> John Clark</p>
+            </div>
+            <div class="testimonial my-2">
+                <img class="testimonial-img" src="{% static 'images/painter-project.jpg'%}" alt="Painter">
+                <p class="comment">"The quality of work delivered by the freelancer is outstanding. Attention to detail
+                    and precision were clearly prioritized."</p>
+                <p class="user">Emily Smith</p>
+            </div>
+            <div class="testimonial my-2">
+                <img class="testimonial-img" src="{% static 'images/Hairdresser.jpg' %}" alt="Hair-cut">
+                <p class="comment">"I could tell that the hairdresser is highly skilled and experienced. The precision
+                    in their work reflects a true mastery of the craft."</p>
+                <p class="user">Rhys Davies</p>
+            </div>
+        </div>
     </div>
 </div>
+
 {% endblock%}

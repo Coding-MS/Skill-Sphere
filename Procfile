@@ -1,1 +1,1 @@
-web: gunicorn Skill-Sphere.wsgi
+web: gunicorn Skill_Sphere.wsgi
