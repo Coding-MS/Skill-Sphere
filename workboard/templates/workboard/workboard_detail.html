@@ -5,8 +5,11 @@
 <div class="container mt-5 mb-10">
     <div class="card mx-auto" style="max-width: 400px; background-color: white; padding: 20px;">
         <h1 class="text-center">{{ workboard.title }}</h1>
+        <p class="text-center"><em>Created by {{ workboard.user }}</em></p>
         <br>
+        <p class="text-center">Speciality required: {{ workboard.speciality }}</p>
         <p class="text-center">{{ workboard.note }}</p>
+        <p class="text-center">{{ workboard.description }}</p>
         <p class="text-center">Due Date: {{ workboard.due_date }}</p>
         <p class="text-center">Special Requirements:{{ workboard.special_requests }}</p>
 

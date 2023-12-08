@@ -2,7 +2,6 @@
 {% load static %}
 {% include 'includes/header.html' %}
 {% block content %}
-<div class="container">
     <div class="hero">
         <img src="{% static 'images/Hero-image.jpg' %}" alt="Conference room with freelancers planning a project">
     </div>
@@ -14,11 +13,9 @@
             project management with user-friendly tools. Elevate your projects with Skill Sphere's diverse
             talent network for unparalleled quality and efficiency in every collaboration.</p>
     </div>
-</div>
 <br>
 <br>
 <section>
-    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <img src="{% static 'images/Freelancer-home.jpg' %}" class="profile" alt="Image of freelancer">
@@ -35,24 +32,23 @@
                 </div>
             </div>
         </div>
-    </div>
 </section>
 <br>
 <h3 class="our-projects"> Our Projects </h3>
 <div class="testimonial-carousel">
-    <div class="testimonial">
+    <div class="testimonial my-2">
         <img class="testimonial-img" src="{% static 'images/Tree-house-project.jpg' %}" alt="Treehouse">
         <p class="comment">"Working with the freelancer felt like a true collaboration. They were open to
             feedback and actively sought to understand my vision for the project."</p>
         <p class="user"> John Clark</p>
     </div>
-    <div class="testimonial">
+    <div class="testimonial my-2">
         <img class="testimonial-img" src="{% static 'images/painter-project.jpg'%}" alt="Painter">
         <p class="comment">"The quality of work delivered by the freelancer is outstanding. Attention to detail
             and precision were clearly prioritized."</p>
         <p class="user">Emily Smith</p>
     </div>
-    <div class="testimonial">
+    <div class="testimonial my-2">
         <img class="testimonial-img" src="{% static 'images/Hairdresser.jpg' %}" alt="Hair-cut">
         <p class="comment">"I could tell that the hairdresser is highly skilled and experienced. The precision
             in their work reflects a true mastery of the craft."</p>

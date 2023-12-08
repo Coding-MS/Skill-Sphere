@@ -18,8 +18,9 @@
                     <p class="card-text"><small class="text-muted">Task Due: {{ workboard_item.due_date }}</small></p>
                 </div>
                 <div class="card-footer">
-                    <a href="{% url 'workboard_detail' workboard_item.id %}" class="btn btn-secondary">View additional
-                        details</a>
+                    <a href="{% url 'workboard_detail' workboard_item.id %}" class="btn btn-secondary">View additional details</a>
+                        <a href="{% url 'workboard_update' workboard_item.id %}">Update</a>
+<a href="{% url 'workboard_delete' workboard_item.id %}">Delete</a>
                 </div>
             </div>
         </div>

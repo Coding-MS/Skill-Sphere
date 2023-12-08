@@ -27,11 +27,7 @@
       color: white;
       padding: 20px;
       border-radius: 10px;
-      position: absolute;
-      bottom: 0; 
-      width: 98.2%; 
       box-sizing: border-box; 
-      z-index: 1;
   }
 
     .border-freelancer {
@@ -43,7 +39,8 @@
     }
 
       .profile {
-        width: 110%;
+        width: 100%;
+        object-fit: cover;
         max-width: 650px;
         border-radius: 10%;
         float: left;

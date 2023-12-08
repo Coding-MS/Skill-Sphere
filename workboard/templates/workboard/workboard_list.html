@@ -6,7 +6,7 @@
 
     <h1>Workboard - Task List</h1>
     <ul>
-        {% for workboard_item in workboard_data %}
+        {% for workboard_item in workboards %}
             <li><a href="{% url 'workboard_detail' slug=task.slug %}">{{ workboard.title }}</a></li>
 
             {% empty %}

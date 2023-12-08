@@ -27,7 +27,7 @@ if os.path.exists('env.py'):
 SECRET_KEY = os.environ.get('SECRET_KEY', '@(cb3cs9mho$wx$f$t0*)&x0x_cg@sx#78xqaz$@9a=i4kc=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://8000-codingms-skillsphere-hn8frokuec4.ws-eu106.gitpod.io/' ,'https://.herokuapp.com', 'https://*gitpod.io', '8000-codingms-skillsphere-hn8frokuec4.ws-eu106.gitpod.io']
 

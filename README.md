@@ -53,10 +53,11 @@ The Sign-in page will require the user to fill in their credientials of an exist
 
 
 ## User flow diagram 
-The User Flow diagram illustrates the process a user would go through in my application from visting the page to performing a specific action. The User flow Diagram is illustrated below 
+The User Flow diagram illustrates the process a user would go through in my application from visting the page to performing a specific action. The User flow Diagram is illustrated below. 
 
 
-The User would first be at the Home page of Skill Sphere. They would then have the option to sign in if they have an existing account. Once they have logged in to Skill Sphere they would have authorization to create a post in the Workboard page. The user would then submit their post to the workboard and have the option to either 
+## Description of user flow 
+The User would first be at the Home page of Skill Sphere. They would then have the option to sign in if they have an existing account. Once they have logged in to Skill Sphere they would have authorization to create a post in the Workboard page. The user would then submit their post to the workboard and have the option to contact a freelancer for the job. 
 
 
 ## ERD diagram the structure of the database 
@@ -71,4 +72,40 @@ The Core functionality of my project will be focussed on the WorkBoard page to e
 ## Possible features 
 During my design phase and ideation of the project I came up with many good ideas for functionality and possible design choices. However due to the time constraints of the project I didn`t have enough time to fully realize the inherent potiential of these features. The list below outlines the ideas for additional functionality which could be added in the future: 
 
-### 
+Search functionality: 
+In the future I plan to make a search functionality that will enable the user to search for related content on page. 
+
+
+Speciality checkbox: 
+I initially planned to have a drop down list on the workboard page that would allow the user to filter all jobs by a certain speciality. This would enable the user to quickly find all jobs related to a certain speciality. 
+
+
+
+### UX 
+Skill Sphere design is focussed on simplicity as I have used the same colour plate to maintain consistency across all pages. The colour scheme is broken down below: 
+
+1: 012622 (dark green) 
+
+This dark green colour is being used to display a text section with a contrasting text colour of white. 
+
+2: E98A15 (orange)
+
+This orange colour is being used to display text in the hero image. 
+
+3: 59114D (Palatinate)
+
+This Palatinate colour is being used in the footer as it stands out. 
+
+4: ECE5F0 (Magnolia)
+
+This Magnolia colour is being used as the default background colour of the pages. 
+
+5: 003B36 (Dark green)
+
+This Dark green colour is being used in the forms that the user will use. 
+
+### Existing features 
+- Navbar 
+
+  - The Navbar has been made through bootstrap 5 templates. 
+  - The Navbar has linked the 

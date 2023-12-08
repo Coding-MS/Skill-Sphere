@@ -18,13 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views
 from workboard.views import Workboard
-from workboard.views import Workboard_list, WorkboardDetail, create_workboard, WorkboardDelete
+from workboard.views import Workboard_list, WorkboardDetail, create_workboard, WorkboardDeleteForm  # noqa
 from django.urls import path, include
 
 urlpatterns = [
     path("", include("workboard.urls")),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('djrichtextfield/', include('djrichtextfield.urls')), 
+    path('djrichtextfield/', include('djrichtextfield.urls')),
 ]
-
