@@ -17,8 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views
-from home.views import home
 from workboard.views import workboard
+from workboard.views import Workboard_list, WorkboardDetail,WorkboardCreate, WorkboardDelete
 from django.urls import path, include
 
 urlpatterns = [

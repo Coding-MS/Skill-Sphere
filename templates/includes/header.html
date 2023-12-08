@@ -16,16 +16,24 @@
                 <a class="nav-link" href="{% url 'workboard' %}">Workboard </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Freelancers </a>
+                <a class="nav-link" href="#">Freelancers </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Sign in </a>
+                <a class="nav-link" href="{% url 'account_login' %}">Sign in </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Sign up </a>
+                <a class="nav-link" href="{% url 'account_signup' %}">Sign up </a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       </div>
+<br>
+{% if request.user.is_authenticated %}
+<p> {{request.user}}</p>
+<a href=''>Logout</a>
+{% else %}
+<a href=''>Login</a>
+{% endif %}
+<hr>

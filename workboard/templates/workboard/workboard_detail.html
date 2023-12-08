@@ -3,8 +3,10 @@
 {% include 'includes/header.html' %}
 {% block content %}
     <h1 class="text-center">{{ workboard.title }}</h1>
+    <br>
     <p class="text-center">{{ workboard.note }}</p>
     <p class="text-center">Due Date: {{ workboard.due_date }}</p>
+    <p class="text-center">Special Requirements: {{ workboard.special_requests }}</p>
    
 {% endblock %}
 

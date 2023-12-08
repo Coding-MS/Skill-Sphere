@@ -42,22 +42,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'cloudinary_storage', 
-    'djrichtextfield', 
-    'crispy_forms', 
-    'crispy_bootstrap5', 
+    'cloudinary_storage',
+    'djrichtextfield',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'cloudinary',
-    'allauth', 
+    'allauth',
     'allauth.account',
-    'home', 
-    'workboard', 
-
+    'allauth.socialaccount',
+    'home',
+    'workboard',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 SITE_ID = 1
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -157,13 +158,14 @@ USE_I18N = True
 USE_TZ = True
 
 #Account Setup 
-ACCOUNT_EMAIL_VERIFICATION = 'username_email'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
