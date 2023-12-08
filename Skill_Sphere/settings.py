@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://8000-codingms-skillsphere-hn8frokuec4.ws-eu106.gitpod.io/' ,'https://.herokuapp.com', 'https://*gitpod.io', '8000-codingms-skillsphere-hn8frokuec4.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['8000-codingms-skillsphere-hn8frokuec4.ws-eu106.gitpod.io' ,'*.herokuapp.com', '*.gitpod.io', '8000-codingms-skillsphere-hn8frokuec4.ws-eu106.gitpod.io', 'skill-sphere-7b0e6f46b30b.herokuapp.com']
 
 
 # Application definition
