@@ -11,7 +11,7 @@
 
             {% empty %}
             <h3 class="text-center"><strong> No items in the list </strong></h3>
-
+            <a href="{% url 'workboard' %}" class="btn btn-secondary">Back to Workboard</a>
         {% endfor %}
     </ul>
 

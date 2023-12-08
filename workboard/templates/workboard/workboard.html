@@ -6,23 +6,44 @@
     <h2 class="text-center mb-4">Workboard</h2>
     <a href="{% url 'workboard_create' %}" class="btn btn-primary">+</a>
     <div class="row">
-        {% for workboard_item in workboard_data %}
+        {% for workboard_item in workboards %}
         <div class="col-md-4 mb-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{ workboard_item.title }}</h5>
                     <p class="card-text">{{ workboard_item.note }}</p>
                     <p class="card-text">{{ workboard_item.special_requests }}</p>
-                    <p class="card-text"><small class="text-muted"> Created at: {{ workboard_item.created_at }}</small></p>
+                    <p class="card-text"><small class="text-muted"> Created at: {{ workboard_item.created_at }}</small>
+                    </p>
                     <p class="card-text"><small class="text-muted">Task Due: {{ workboard_item.due_date }}</small></p>
                 </div>
                 <div class="card-footer">
-                    <a href="{% url 'workboard_detail' workboard_item.id %}" class="btn btn-secondary">View additional details</a>
+                    <a href="{% url 'workboard_detail' workboard_item.id %}" class="btn btn-secondary">View additional
+                        details</a>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-{% endfor %}
+</div>
+
+<!-- Pagination -->
+<div class="pagination my-5">
+    <span class="step-links">
+        {% if workboards.has_previous %}
+        <a class="pagination-btn first-page-btn" href="?page=1">&laquo; first</a>
+        <a class="pagination-btn prev-page-btn" href="?page={{ workboards.previous_page_number }}">prev</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ workboards.number }} of {{ workboards.paginator.num_pages }}.
+        </span>
+
+        {% if workboards.has_next %}
+        <a class="pagination-btn next-page-btn" href="?page={{ workboards.next_page_number }}">next</a>
+        <a class="pagination-btn last-page-btn" href="?page={{ workboards.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
 </div>
 
 {% endblock %}

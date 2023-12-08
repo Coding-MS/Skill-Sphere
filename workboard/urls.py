@@ -15,19 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from workboard.views import Workboard_list, WorkboardDetail,WorkboardCreate, WorkboardDelete
+from workboard.views import Workboard_list, WorkboardDetail, create_workboard, WorkboardDelete
 from home.views import home
-from .views import WorkboardView
+from .views import WorkboardView, WorkboardDetail, WorkboardDelete, create_workboard
 from django.urls import path, include
 
 urlpatterns = [
     path('', home, name='home'),
     path('accounts/', include('allauth.urls')),
     path('djrichtextfield/', include('djrichtextfield.urls')), 
-    path('workboard/workboard/', WorkboardView.as_view(), name='workboard'),
+    path('workboard/', WorkboardView.as_view(), name='workboard'),
     path('workboard/workboard_list/', Workboard_list.as_view(), name='workboard_list'),
     path('workboard/<int:pk>/', WorkboardDetail.as_view(), name='workboard_detail'),
-    path('workboard/workboard_create/', WorkboardCreate.as_view(), name='workboard_create'),
+    path('workboard/workboard_create/', create_workboard, name='workboard_create'),
     path('workboard_delete/<int:pk>/', WorkboardDelete.as_view(), name='workboard_delete'),
 ]
 

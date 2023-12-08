@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from djrichtextfield.models import RichTextField
 
-class workboard (models.Model):
+class Workboard (models.Model):
     SPECIALITIES = [
         ('Plumber', 'Plumber'),
         ('Caterers', 'Caterers'),

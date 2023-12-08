@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import workboard
+from .models import Workboard
 # Register your models here.
 
-admin.site.register(workboard)
+admin.site.register(Workboard)
